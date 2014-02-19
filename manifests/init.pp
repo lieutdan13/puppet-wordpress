@@ -343,6 +343,7 @@ class wordpress (
     ''      => $wordpress::web_server ? {
       apache  =>  'wordpress/apache/virtualhost.conf.erb',
       nginx   =>  'wordpress/nginx/virtualhost.conf.erb',
+      default =>  undef,
     },
     default => $wordpress::web_server_template,
   }
